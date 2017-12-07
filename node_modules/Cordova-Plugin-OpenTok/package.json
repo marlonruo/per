@@ -1,0 +1,41 @@
+{
+  "_from": "git+https://github.com/opentok/cordova-plugin-opentok.git",
+  "_id": "Cordova-Plugin-OpenTok@3.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-oqAd7RPwlue4aREW4I3HKWe42EI=",
+  "_location": "/Cordova-Plugin-OpenTok",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/opentok/cordova-plugin-opentok/",
+    "rawSpec": "https://github.com/opentok/cordova-plugin-opentok/",
+    "saveSpec": "git+https://github.com/opentok/cordova-plugin-opentok.git",
+    "fetchSpec": "https://github.com/opentok/cordova-plugin-opentok.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/opentok/cordova-plugin-opentok.git#08148595fd184ad92611135e1181d9cc60648cbc",
+  "_spec": "https://github.com/opentok/cordova-plugin-opentok/",
+  "_where": "C:\\Users\\Marlon\\Documents\\GitHub\\permisos",
+  "bundleDependencies": false,
+  "dependencies": {
+    "exec": "^0.2.0",
+    "tar": "^2.0.0"
+  },
+  "deprecated": false,
+  "description": "![OpenTok Labs](https://d26dzxoao6i3hh.cloudfront.net/items/0U1R0a0e2g1E361H0x3c/Image%202017-11-22%20at%2012.16.38%20PM.png?v=2507a2df)\r # Cordova Plugin for OpenTok iOS and Android",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.3.3",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1"
+  },
+  "name": "Cordova-Plugin-OpenTok",
+  "version": "3.0.0"
+}

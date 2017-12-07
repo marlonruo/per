@@ -1,0 +1,21 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.tokbox.cordova.opentok": {
+      "PACKAGE_NAME": "org.apache.cordova.permisos"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "org.apache.cordova.permisos"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "org.apache.cordova.permisos"
+    }
+  },
+  "dependent_plugins": {}
+}
