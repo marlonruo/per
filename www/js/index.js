@@ -19,45 +19,24 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        this.bindEvents();
     },
-
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
     // deviceready Event Handler
     //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-		
-		
-cordova.plugins.diagnostic.isCameraAvailable({
-    successCallback: function(available){
-        alert("Camera is " + (available ? "available" : "not available"));
+        app.receivedEvent('deviceready');
+		app.initApplozicChat();
+		StatusBar.hide()
     },
-    errorCallback: function(error){
-        alert("The following error occurred: "+error);
-    },
-    externalStorage: false
-});
-		
-		
-cordova.plugins.diagnostic.requestCameraAuthorization({
-    successCallback: function(status){
-        console.log("Authorization request for camera use was " + (status == cordova.plugins.diagnostic.permissionStatus.GRANTED ? "granted" : "denied"));
-		alert("Authorization request for camera use was " + (status == cordova.plugins.diagnostic.permissionStatus.GRANTED ? "granted" : "denied"));
-    },
-    errorCallback: function(error){
-        console.error(error);
-		alert(error)
-    },
-    externalStorage: false
-});
-	
-	
-		
-	this.receivedEvent('deviceready');		
-		
-    },
-
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -68,7 +47,21 @@ cordova.plugins.diagnostic.requestCameraAuthorization({
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+    
+    initApplozicChat: function() {
+	    try {
+	        (function(d, m){var s, h;       
+	        s = document.createElement("script");
+	        s.type = "text/javascript";
+	        s.async=true;
+	        s.src="https://apps.applozic.com/sidebox.app";
+	        h=document.getElementsByTagName('head')[0];
+	        h.appendChild(s);
+	        window.applozic=m;
+	        m.init=function(t){m._globals=t;}})(document, window.applozic || {});
+	        window.applozic.init({appId:"applozic-sample-app", userId: "john", userName: "John Snow", desktopNotification: true,  notificationIconLink: "PUT_LOGO_IMAGE_LINK_HERE"});
+	    } catch(err) {alert(err); }
     }
 };
 
-app.initialize();
